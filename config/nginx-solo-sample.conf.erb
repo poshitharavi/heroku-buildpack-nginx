@@ -30,10 +30,10 @@ http {
 
 	server {
 		listen <%= ENV["PORT"] %>;
-		server_name _;
-		keepalive_timeout 5;
-		client_max_body_size <%= ENV['NGINX_CLIENT_MAX_BODY_SIZE'] || 1 %>M;
-
-		root /dist/apps/frontend-v1; # path to your app
+		  server_name test.sharqa.com;
+    root /home/linuxhint/www;
+    index index.html;
 	}
+
+
 }
